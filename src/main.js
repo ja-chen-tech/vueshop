@@ -2,6 +2,7 @@ import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
 import './assets/css/global.css'
+import TreeTable from 'vue-table-with-tree-grid'
 //注册element-ui组件
 import ElementUI from 'element-ui'
 Vue.use(ElementUI)
@@ -18,6 +19,7 @@ axios.interceptors.request.use(config=>{
 Vue.prototype.$http = axios
 
 Vue.config.productionTip = false
+Vue.component('tree-table',TreeTable)
 
 new Vue({
   router,
